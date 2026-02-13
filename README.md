@@ -18,7 +18,11 @@ TRIDENT is not an installer.
 
 ## **Badges**
 
-`https://img.shields.io/badge/License-MIT-green.svg` `https://img.shields.io/badge/Governance-Kernel-blue.svg` `https://img.shields.io/badge/WSL-Ready-informational.svg` `https://img.shields.io/badge/Language-Bash-yellow.svg` `https://img.shields.io/badge/Domain-Autonomous%20Systems-purple.svg`
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Governance-Kernel](https://img.shields.io/badge/Governance-Kernel-blue.svg)
+![WSL-Ready](https://img.shields.io/badge/WSL-Ready-informational.svg)
+![Language-Bash](https://img.shields.io/badge/Language-Bash-yellow.svg)
+![Domain-Autonomous](https://img.shields.io/badge/Domain-Autonomous%20Systems-purple.svg)
 
 ---
 
