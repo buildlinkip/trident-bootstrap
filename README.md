@@ -1,5 +1,10 @@
 # **TRIDENT Bootstrap v0.2**
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d8636a10-0c73-4f61-a57d-fdf3e20341d2" width="200">
+</p>
+
+
 TRIDENT Bootstrap is a governance‑first initialization process that enforces provenance, isolation, safety, and controlled execution before any automation or AI system is installed or run.
 
 This project provides:
