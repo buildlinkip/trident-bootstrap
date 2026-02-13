@@ -1,0 +1,26 @@
+{
+  "version": "0.1",
+  "description": "Placeholder for future TRIDENT policy modules. This file defines the structure, not the rules.",
+  "policy": {
+    "isolation": {
+      "allowed_paths": [
+        "/opt/trident-bootstrap"
+      ],
+      "denied_prefixes": [
+        "$HOME",
+        "/root",
+        "/tmp"
+      ]
+    },
+    "runtime": {
+      "require_node_version": "22",
+      "require_python": true,
+      "require_venv": true,
+      "docker_optional": true
+    },
+    "provenance": {
+      "require_actor": true,
+      "require_purpose": true
+    }
+  }
+}
