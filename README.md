@@ -1,222 +1,216 @@
-# **TRIDENT Bootstrap v0.2**
+# **TRIDENT Bootstrap v0.3**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d8636a10-0c73-4f61-a57d-fdf3e20341d2" width="200">
+  <img src="https://github.com/user-attachments/assets/d8636e10-0c73-4f61-a57d-fdf3e20341d2" width="200">
 </p>
 
+TRIDENT Bootstrap is a governance‑first initialization system that enforces provenance, isolation, safety, and controlled execution **before any autonomous system or automation stack is allowed to run**.
 
-TRIDENT Bootstrap is a governance‑first initialization process that enforces provenance, isolation, safety, and controlled execution before any automation or AI system is installed or run.
-
-This project provides:
-
-* A governed bootstrap flow  
-* Tamper‑evident append‑only logging  
-* Isolation and privilege gates  
-* Node.js and Python environment validation  
-* Human override gates with provenance capture  
-* A deterministic, auditable installer wrapper
+v0.3 transforms the bootstrap from a static preflight script into a **self‑diagnosing, self‑repairing governance kernel** that prepares an operator‑grade environment with deterministic behavior and zero silent failures.
 
 TRIDENT is not an installer.  
- It is a **governance kernel** that wraps installers in safety, auditability, and intent.
+It is the **boundary layer** that ensures installers and agents operate inside law, structure, and auditability.
 
 ---
 
 ## **Badges**
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Governance-Kernel](https://img.shields.io/badge/Governance-Kernel-blue.svg)
-![WSL-Ready](https://img.shields.io/badge/WSL-Ready-informational.svg)
-![Language-Bash](https://img.shields.io/badge/Language-Bash-yellow.svg)
-![Domain-Autonomous](https://img.shields.io/badge/Domain-Autonomous%20Systems-purple.svg)
+`https://img.shields.io/badge/License-MIT-green.svg`
+`https://img.shields.io/badge/Governance-Kernel-blue.svg`
+`https://img.shields.io/badge/Self--Repairing-orange.svg`
+`https://img.shields.io/badge/WSL-Safe-informational.svg`
+`https://img.shields.io/badge/Language-Bash-yellow.svg`
 
 ---
 
-## **Why TRIDENT exists**
+# **What’s New in v0.3**
 
-Autonomy is accelerating faster than governance. Modern agents can act, decide, and propagate consequences at machine speed, but the systems meant to contain them still operate on human assumptions. This gap is not theoretical. It is structural. And it is dangerous.
+TRIDENT Bootstrap v0.3 introduces a full architectural upgrade:
 
-TRIDENT exists because **autonomy without governance is fragility**, a point made explicit in the doctrine:
+### **✔ Filesystem Gate (NEW)**
+Detects unsafe WSL DrvFS execution and blocks venv/symlink corruption.  
+Offers guided migration to `/opt/trident-bootstrap`.
 
-Autonomy without governance is a liability. Speed without structure is fragility. Power without constraint is a threat.
+### **✔ Dependency Auto‑Install (NEW)**
+Automatically installs:
+- `jq`
+- `curl`
+- Python venv modules
+- Node.js 22.x (via NodeSource)
+- Docker (optional)
 
-Unchecked agents drift. They accumulate privilege. They mutate state. They create ghost operations that cannot be reconstructed or audited. They fail silently, and silent failures compound. TRIDENT is the counterforce — engineered friction at the exact points where friction prevents catastrophe.
+All with explicit human approval and provenance logging.
 
-The doctrine frames this as **survival architecture**, not bureaucracy:
+### **✔ Venv Integrity Gate (UPGRADED)**
+Validates:
+- activation scripts  
+- Python version alignment  
+- pyvenv.cfg  
+- filesystem type  
+- corruption or partial installs  
 
-TRIDENT applies engineered compression. Deliberate friction at the points where friction prevents catastrophe.
+Auto‑repairs when needed.
 
-TRIDENT exists to impose **law, structure, and legibility** on autonomous execution. It transforms raw capability into governed capability by enforcing seven non‑negotiable properties:
+### **✔ Node.js Auto‑Upgrade (UPGRADED)**
+Detects outdated Node versions and performs a governed upgrade to Node.js 22.x.
 
-* **Traceability:** no ghost states  
-* **Restriction:** no unbounded authority  
-* **Integrity:** no rewriting history  
-* **Determinism:** no unpredictable outcomes  
-* **Enforcement:** no bypass paths  
-* **Narration:** no unreadable failures  
-* **Trust:** no permanent privilege
+### **✔ Doctor Mode (NEW)**
+```
+./trident-prep.sh --doctor
+```
+Runs a full environment scan + auto‑repair without executing the full bootstrap.
 
-These are not features. They are constitutional guarantees.
+### **✔ State Cache (NEW)**
+Stores:
+- python version  
+- node version  
+- venv path  
+- filesystem type  
 
-The doctrine states the mandate plainly:
+Ensures deterministic re‑runs.
 
-Autonomous systems shall operate inside law, or they shall not operate at all.
-
-TRIDENT exists because enterprises need a **control plane for autonomy** — a governance kernel that captures intent, evaluates policy, scores risk, constrains execution, and commits an immutable forensic record. It is the infrastructure that makes autonomy survivable, auditable, and deployable at scale.
-
-Autonomous agents are inevitable.  
- Uncontrolled agents are unacceptable.  
- TRIDENT is the boundary between the two.
+### **✔ Narration Overhaul**
+Every decision is narrated in TRIDENT doctrine voice.  
+No silent failures. No invisible actions.
 
 ---
 
-## **TRIDENT Architecture**
+# **Why TRIDENT Exists**
 
-TRIDENT sits between agent cognition and real‑world execution. Every autonomous action must pass through the Five Gate Pipeline before it can produce any effect.
+Autonomous systems are accelerating faster than the guardrails meant to contain them. Agents can act, mutate state, and propagate consequences at machine speed — but most environments still assume human‑paced failure modes.
 
-### **The Five Gate Pipeline**
+This mismatch is structural.
 
-Intent → Policy → Risk → Execution → Ledger  
- G1 → G2 → G3 → G4 → G5
+TRIDENT exists to impose **law, structure, and legibility** on autonomous execution. It enforces seven non‑negotiable guarantees:
 
-### **Gate Overview**
+- **Traceability** — no ghost states  
+- **Restriction** — no unbounded authority  
+- **Integrity** — no rewriting history  
+- **Determinism** — no unpredictable outcomes  
+- **Enforcement** — no bypass paths  
+- **Narration** — no unreadable failures  
+- **Trust** — no permanent privilege  
+
+Autonomous systems shall operate inside law,  
+or they shall not operate at all.
+
+TRIDENT is the control plane that makes autonomy survivable.
+
+---
+
+# **Architecture Overview**
+
+TRIDENT sits between agent cognition and real‑world execution.  
+Every action must pass through the **Five Gate Pipeline**:
+
+**Intent → Policy → Risk → Execution → Ledger**  
+**G1 → G2 → G3 → G4 → G5**
+
+### **Gate Summary**
 
 | Gate | Name | Purpose |
-| ----- | ----- | ----- |
-| **G1** | Intent Capture | Records the agent’s declared objective before any execution begins |
-| **G2** | Policy Evaluation | Determines legality, authorization boundaries, and applicable rules |
-| **G3** | Risk Scoring | Models potential impact, failure domains, and consequence severity |
-| **G4** | Controlled Execution | Performs sandboxed, policy‑constrained action within scoped capability |
-| **G5** | Forensic Recording | Commits immutable ledger evidence with cryptographic attestation |
+|------|------|---------|
+| **G1** | Intent Capture | Declares objective and provenance |
+| **G2** | Policy Evaluation | Determines legality and authorization |
+| **G3** | Risk Scoring | Models impact and failure domains |
+| **G4** | Controlled Execution | Sandboxed, scoped, reversible |
+| **G5** | Forensic Recording | Immutable, append‑only ledger |
 
-### **Architectural Guarantees**
+TRIDENT guarantees:
 
-* No silent failures  
-* No unrecorded decisions  
-* No invisible actions  
-* No bypass paths  
-* Every action is governed, or it does not execute
-
-TRIDENT transforms autonomy from a raw capability into a governed domain.
+- no silent failures  
+- no invisible actions  
+- no ungoverned execution  
 
 ---
 
-## **Features**
+# **Bootstrap Features (v0.3)**
 
-### **Provenance Chain**
+### **Filesystem Gate**
+Blocks unsafe execution on WSL DrvFS.  
+Ensures venvs, symlinks, and permissions behave predictably.
 
-Every action is logged with:
+### **Dependency Gate**
+Auto‑installs missing prerequisites with explicit human approval.
 
-* timestamp  
-* script version  
-* decision (PERMIT / DENY / ESCALATE / OVERRIDE)  
-* rationale  
-* previous hash (for tamper‑evidence)
-
-### **Isolation Gates**
-
-The bootstrap escalates or denies if run from:
-
-* `$HOME`  
-* `/root`  
-* `/tmp`
-
-Recommended path:
-
-`/opt/trident-bootstrap`
-
-### **Python Venv Preflight**
-
-Ensures:
-
-* Python3 exists  
-* venv module exists  
-* venv is created or reused  
-* execution is isolated
+### **Venv Integrity Gate**
+Creates, validates, or repairs Python virtual environments.
 
 ### **Node.js Gate**
+Requires Node.js 22+.  
+Auto‑upgrades when needed.
 
-Requires Node.js **22+**.
-
-### **Docker Gate (optional)**
-
-Strengthens sandboxing but can be overridden.
+### **Docker Gate**
+Optional but recommended for strong sandboxing.
 
 ### **Intent Capture**
-
 Binds the bootstrap to a human actor and purpose.
 
+### **Append‑Only Provenance Ledger**
+Every decision is hashed and chained for tamper‑evidence.
+
 ---
 
-## **Quick Start**
+# **Quick Start**
 
-### **1\. Clone the repository**
-
-git clone https://github.com/YOURNAME/trident-bootstrap.git  
+### **1. Clone the repository**
+```
+git clone https://github.com/YOURNAME/trident-bootstrap.git
 cd trident-bootstrap
+```
 
-### **2\. Make the script executable**
+### **2. Make the script executable**
+```
+chmod +x trident-prep.sh
+```
 
-chmod \+x trident-prep.sh
-
-### **3\. Run the bootstrap**
-
+### **3. Run the bootstrap**
+```
 ./trident-prep.sh
+```
 
 ---
 
-## **Directory Recommendation**
+# **Recommended Directory**
 
-TRIDENT should be run from a dedicated, isolated directory:
+TRIDENT should run from a stable, isolated path:
 
-sudo mkdir \-p /opt/trident-bootstrap  
-sudo chown \-R $USER:$USER /opt/trident-bootstrap
+```
+sudo mkdir -p /opt/trident-bootstrap
+sudo chown -R $USER:$USER /opt/trident-bootstrap
+```
 
 ---
 
-## **Roadmap**
+# **Roadmap**
 
-### **v0.3 — Policy Module Loader**
+### **v0.4 — Policy Module Loader**
+Load and enforce external rule sets.
 
-Load, validate, and enforce external policy rule sets.
+### **v0.5 — Actor Registry**
+Identity binding for humans and agents.
 
-### **v0.4 — Actor Registry**
+### **v0.6 — Intent Capsule Simulator**
+Simulate intent → policy → risk → execution.
 
-Human and agent identity registry with provenance binding.
-
-### **v0.5 — Intent Capsule Simulator**
-
-Local simulation of intent → policy → risk → execution.
-
-### **v0.6 — Sandbox Hooks**
-
-Execution sandbox with capability tokens and fuel metering.
+### **v0.7 — Sandbox Hooks**
+Capability tokens, fuel metering, and execution envelopes.
 
 ### **v1.0 — Full Governance Kernel**
-
-Complete Five Gate Pipeline with immutable ledger and HITL escalation.
-
----
-
-## **License**
-
-MIT License. See `LICENSE` for details.
+Complete Five Gate Pipeline with HITL escalation.
 
 ---
 
-## **Security**
-
-See `SECURITY.md`.
-
----
-
-## **Contributing**
-
-See `CONTRIBUTING.md`.
+# **License**
+MIT License.
 
 ---
 
-## **Status**
+# **Contributing**
+PRs welcome. Governance‑aligned contributions preferred.
 
+---
+
+# **Status**
 Active development.  
-TRIDENT is evolving into a full governance kernel for BuildLink and related systems.
-
+TRIDENT is evolving into a full governance kernel for BuildLink and autonomous systems.
