@@ -1,7 +1,7 @@
 # **TRIDENT Bootstrap v0.3**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d8636e10-0c73-4f61-a57d-fdf3e20341d2" width="200">
+  <img src="https://github.com/user-attachments/assets/d8636a10-0c73-4f61-a57d-fdf3e20341d2" width="200">
 </p>
 
 TRIDENT Bootstrap is a governance‑first initialization system that enforces provenance, isolation, safety, and controlled execution **before any autonomous system or automation stack is allowed to run**.
@@ -15,11 +15,12 @@ It is the **boundary layer** that ensures installers and agents operate inside l
 
 ## **Badges**
 
-`https://img.shields.io/badge/License-MIT-green.svg`
-`https://img.shields.io/badge/Governance-Kernel-blue.svg`
-`https://img.shields.io/badge/Self--Repairing-orange.svg`
-`https://img.shields.io/badge/WSL-Safe-informational.svg`
-`https://img.shields.io/badge/Language-Bash-yellow.svg`
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Governance-Kernel](https://img.shields.io/badge/Governance-Kernel-blue.svg)
+![WSL-Ready](https://img.shields.io/badge/WSL-Ready-informational.svg)
+![Language-Bash](https://img.shields.io/badge/Language-Bash-yellow.svg)
+![Domain-Autonomous](https://img.shields.io/badge/Domain-Autonomous%20Systems-purple.svg)
+
 
 ---
 
