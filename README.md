@@ -24,6 +24,43 @@ It is the **boundary layer** that ensures installers and agents operate inside l
 
 ---
 
+# **Quick Start**
+
+
+# 1. Enter Ubuntu (WSL or native)
+
+```wsl ~```       # only needed on Windows
+
+# or just open a terminal on native Ubuntu
+
+# 2. Create the isolated directory
+
+```
+sudo mkdir -p /opt/trident-bootstrap
+sudo chown -R $USER:$USER /opt/trident-bootstrap
+```
+
+# 3. Clone TRIDENT directly into /opt
+
+```
+cd /opt/trident-bootstrap
+git clone https://github.com/buildlinkip/trident-bootstrap.git
+```
+
+# 4. Make the script executable
+
+```
+chmod +x trident-prep.sh
+```
+
+# 5. Run the bootstrap
+
+```
+./trident-prep.sh
+```
+
+---
+
 # **What’s New in v0.3**
 
 TRIDENT Bootstrap v0.3 introduces a full architectural upgrade:
@@ -149,43 +186,6 @@ Binds the bootstrap to a human actor and purpose.
 
 ### **Append‑Only Provenance Ledger**
 Every decision is hashed and chained for tamper‑evidence.
-
----
-
-# **Quick Start**
-
-
-# 1. Enter Ubuntu (WSL or native)
-
-```wsl ~```       # only needed on Windows
-
-# or just open a terminal on native Ubuntu
-
-# 2. Create the isolated directory
-
-```
-sudo mkdir -p /opt/trident-bootstrap
-sudo chown -R $USER:$USER /opt/trident-bootstrap
-```
-
-# 3. Clone TRIDENT directly into /opt
-
-```
-cd /opt/trident-bootstrap
-git clone https://github.com/buildlinkip/trident-bootstrap.git
-```
-
-# 4. Make the script executable
-
-```
-chmod +x trident-prep.sh
-```
-
-# 5. Run the bootstrap
-
-```
-./trident-prep.sh
-```
 
 ---
 
