@@ -57,15 +57,11 @@ append_log() {
 }
 
 narrate() {
-    printf "${BLUE}\n╔══════════════════════════════════════════════════════════════╗${RESET}\n"
     printf "${BLUE}║ ${CYAN}TRIDENT NARRATION:${RESET} %s\n" "$*"
-    printf "${BLUE}╚══════════════════════════════════════════════════════════════╝${RESET}\n\n"
 }
 
 narrate_repair() {
-    printf "${YELLOW}\n╔══════════════════════════════════════════════════════════════╗${RESET}\n"
     printf "${YELLOW}║ ${WHITE}TRIDENT AUTO-REPAIR:${RESET} %s\n" "$*"
-    printf "${YELLOW}╚══════════════════════════════════════════════════════════════╝${RESET}\n\n"
 }
 
 ask_override() {
@@ -392,9 +388,7 @@ check_platform() {
 doctor_mode() {
     narrate "${WHITE}TRIDENT DOCTOR MODE: Environment Diagnostics${RESET}"
     printf "\n"
-    printf "${CYAN}╔════════════════════════════════════════════════════════════════╗${RESET}\n"
     printf "${CYAN}║ TRIDENT Bootstrap Doctor v%s                                      ║${RESET}\n" "$SCRIPT_VERSION"
-    printf "${CYAN}╚════════════════════════════════════════════════════════════════╝${RESET}\n\n"
     printf "${BLUE}┌─ Filesystem Check ─────────────────────────────────────────────┐${RESET}\n"
     local pwd_real
     pwd_real="$(pwd -P)"
@@ -508,12 +502,11 @@ main() {
         doctor_mode
     fi
     printf "${WHITE}\n"
-    printf "  ██████╗  ██████╗ ███████╗\n"
-    printf "  ╚════██╗██╔═████╗██╔════╝\n"
-    printf "   █████╔╝██║██╔██║███████╗\n"
-    printf "  ██╔═══╝ ████╔╝██║╚════██║\n"
-    printf "  ███████╗╚██████╔╝███████║\n"
-    printf "  ╚══════╝ ╚═════╝ ╚══════╝\n"
+    printf " ░        ░░       ░░░        ░░       ░░░        ░░   ░░░  ░░        ░\n"
+    printf " ▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒▒▒▒▒    ▒▒  ▒▒▒▒▒  ▒▒▒▒\n"
+    printf " ▓▓▓▓  ▓▓▓▓▓       ▓▓▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓  ▓▓      ▓▓▓▓  ▓  ▓  ▓▓▓▓▓  ▓▓▓▓\n"
+    printf " ████  █████  ███  ██████  █████  ████  ██  ████████  ██    █████  ████\n"
+    printf " ████  █████  ████  ██        ██       ███        ██  ███   █████  ████\n"
     printf "TRIDENT Bootstrap v${SCRIPT_VERSION}${RESET}\n\n"
     narrate "TRIDENT Bootstrap v${SCRIPT_VERSION} starting"
     append_log "BOOTSTRAP_START" "Script invoked" "PERMIT" "Provenance chain begins"
