@@ -156,7 +156,7 @@ Every decision is hashed and chained for tamper‑evidence.
 
 ### **1. Clone the repository**
 ```
-git clone https://github.com/YOURNAME/trident-bootstrap.git
+git clone https://github.com/buildlinkip/trident-bootstrap.git
 cd trident-bootstrap
 ```
 
