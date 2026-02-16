@@ -42,7 +42,7 @@ sudo chown -R $USER:$USER /opt/trident-bootstrap
 
 ```
 cd /opt/trident-bootstrap
-git clone https://github.com/buildlinkip/trident-bootstrap.git
+git clone https://github.com/buildlinkip/trident-bootstrap.git .
 ```
 
 ## 4. Make the script executable
