@@ -21,39 +21,37 @@ It is the **boundary layer** that ensures installers and agents operate inside l
 ![Language-Bash](https://img.shields.io/badge/Language-Bash-yellow.svg)
 ![Domain-Autonomous](https://img.shields.io/badge/Domain-Autonomous%20Systems-purple.svg)
 
-
 ---
 
-# **Quick Start**
+# Quick Start
 
-
-# 1. Enter Ubuntu (WSL or native)
+## 1. Enter Ubuntu (WSL or native)
 
 ```wsl ~```       # only needed on Windows
 
-# or just open a terminal on native Ubuntu
+or just open a terminal on native Ubuntu
 
-# 2. Create the isolated directory
+## 2. Create the isolated directory
 
 ```
 sudo mkdir -p /opt/trident-bootstrap
 sudo chown -R $USER:$USER /opt/trident-bootstrap
 ```
 
-# 3. Clone TRIDENT directly into /opt
+## 3. Clone TRIDENT directly into /opt
 
 ```
 cd /opt/trident-bootstrap
 git clone https://github.com/buildlinkip/trident-bootstrap.git
 ```
 
-# 4. Make the script executable
+## 4. Make the script executable
 
 ```
 chmod +x trident-prep.sh
 ```
 
-# 5. Run the bootstrap
+## 5. Run the bootstrap
 
 ```
 ./trident-prep.sh
