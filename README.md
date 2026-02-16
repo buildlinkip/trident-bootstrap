@@ -125,7 +125,7 @@ TRIDENT guarantees:
 
 ---
 
-# **Bootstrap Features (v0.3)**
+# **Bootstrap Features (v0.4)**
 
 ### **Filesystem Gate**
 Blocks unsafe execution on WSL DrvFS.  
@@ -154,51 +154,38 @@ Every decision is hashed and chained for tamper‑evidence.
 
 # **Quick Start**
 
-### **1. Clone the repository**
-```
-git clone https://github.com/buildlinkip/trident-bootstrap.git
-cd trident-bootstrap
-```
 
-### **2. Make the script executable**
-```
-chmod +x trident-prep.sh
-```
+# 1. Enter Ubuntu (WSL or native)
 
-### **3. Run the bootstrap**
-```
-./trident-prep.sh
-```
+```wsl ~```       # only needed on Windows
 
----
+# or just open a terminal on native Ubuntu
 
-# **Recommended Directory**
-
-TRIDENT should run from a stable, isolated path:
+# 2. Create the isolated directory
 
 ```
 sudo mkdir -p /opt/trident-bootstrap
 sudo chown -R $USER:$USER /opt/trident-bootstrap
 ```
 
----
+# 3. Clone TRIDENT directly into /opt
 
-# **Roadmap**
+```
+cd /opt/trident-bootstrap
+git clone https://github.com/buildlinkip/trident-bootstrap.git
+```
 
-### **v0.4 — Policy Module Loader**
-Load and enforce external rule sets.
+# 4. Make the script executable
 
-### **v0.5 — Actor Registry**
-Identity binding for humans and agents.
+```
+chmod +x trident-prep.sh
+```
 
-### **v0.6 — Intent Capsule Simulator**
-Simulate intent → policy → risk → execution.
+# 5. Run the bootstrap
 
-### **v0.7 — Sandbox Hooks**
-Capability tokens, fuel metering, and execution envelopes.
-
-### **v1.0 — Full Governance Kernel**
-Complete Five Gate Pipeline with HITL escalation.
+```
+./trident-prep.sh
+```
 
 ---
 
@@ -213,5 +200,6 @@ PRs welcome. Governance‑aligned contributions preferred.
 ---
 
 # **Status**
+
 Active development.  
-TRIDENT is evolving into a full governance kernel for BuildLink and autonomous systems.
+TRIDENT is evolving into a full governance kernel for autonomous systems.
